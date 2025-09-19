@@ -3,15 +3,9 @@
 @{    
     ViewData["Title"] = "Home page";
 }
-<div class="wrap">
-  <div class="card" role="region" aria-label="Norlys banner">
-      <div class="banner">
-        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSi3EDeksQzQdGNyeHLB52X3vjBKT7Kyp_LA&s" alt="Norlys logo" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block'" />
-        <div class="logo-fallback" aria-hidden="false">Norlys</div>
-      </div>
-
-      <div class="hero">
-        <h1>Kasper Tindbæk was here</h1>
-      </div>
-    </div>
-  </div>
+<div class="text-center">
+    <h1 class="display-4">Hello World from .NET 8</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <hr />
+    <div>Host operating system: @Model.OSVersion</div>
+</div>
