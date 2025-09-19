@@ -1,12 +1,41 @@
-﻿@page
-@model IndexModel
-@{    
-    ViewData["Title"] = "Home page";
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norlys — Kasper Tindbæk was here</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --banner-bg:#f5f7fb;
+      --accent:#0b2b5a;
+      --max-width:1100px;
+    }
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#111}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px}
+    .card{width:100%;max-width:var(--max-width);border-radius:14px;box-shadow:0 8px 30px rgba(12,20,40,0.08);overflow:hidden}
+    .banner{display:flex;flex-direction:column;align-items:center;gap:22px;padding:48px;background:var(--banner-bg);text-align:center}
+    .logo{width:min(520px,90%);height:auto;max-height:220px;object-fit:contain}
+    .hero{padding:48px 32px;background:white;text-align:center}
+    .hero h1{margin:0;font-size:clamp(28px,5vw,56px);letter-spacing:-0.02em;color:var(--accent)}
+    .hero p{margin:12px 0 0;font-size:16px;color:#444}
+    .logo-fallback{display:none;padding:18px 22px;border-radius:10px;background:#e9eef8;color:var(--accent);font-weight:600}
+    img[alt="Norlys logo"]{display:block}
+    @media (max-width:520px){.banner{padding:28px}.hero{padding:28px 18px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Norlys banner">
+      <div class="banner">
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSi3EDeksQzQdGNyeHLB52X3vjBKT7Kyp_LA&s" alt="Norlys logo" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block'" />
+        <div class="logo-fallback" aria-hidden="false">Norlys</div>
+      </div>
 
-<div class="text-center">
-    <h1 class="display-4">Hello World from .NET 8</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <hr />
-    <div>Host operating system: @Model.OSVersion</div>
-</div>
+      <div class="hero">
+        <h1>Kasper Tindbæk was here</h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
