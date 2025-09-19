@@ -3,9 +3,25 @@
 @{    
     ViewData["Title"] = "Home page";
 }
+
 <div class="text-center">
     <h1 class="display-4">Hello World from .NET 8</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
     <hr />
+
+    <!-- Add your Norlys image -->
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSi3EDeksQzQdGNyeHLB52X3vjBKT7Kyp_LA&s" 
+             alt="Norlys Logo" 
+             style="max-width:300px; height:auto; margin-top:20px;" />
+    </div>
+
+    <!-- Add your text -->
+    <h2 style="margin-top:20px; color:#0b2b5a;">Kasper Tindbæk was here</h2>
+
+    <hr />
+
+    <!-- Keep original OS info -->
     <div>Host operating system: @Model.OSVersion</div>
 </div>
