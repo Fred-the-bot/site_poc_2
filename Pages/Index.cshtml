@@ -1,21 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Norlys — Kasper Tindbæk was here</title>
-  <style>
-    :root{
-      --bg:#ffffff;
-      --banner-bg:#f5f7fb;
-      --accent:#0b2b5a;
-      --max-width:1100px;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="card" role="region" aria-label="Norlys banner">
+@page
+@model IndexModel
+@{    
+    ViewData["Title"] = "Home page";
+}
+<div class="wrap">
+  <div class="card" role="region" aria-label="Norlys banner">
       <div class="banner">
         <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSi3EDeksQzQdGNyeHLB52X3vjBKT7Kyp_LA&s" alt="Norlys logo" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block'" />
         <div class="logo-fallback" aria-hidden="false">Norlys</div>
@@ -26,5 +15,3 @@
       </div>
     </div>
   </div>
-</body>
-</html>
